@@ -4,7 +4,11 @@
 </p>
 <p> Hello and welcome to my project for CSCI 39542. The focus of this project is researching art programs in NYC schools from K-12 (including visual arts, music, and theater) and seeing the number of students that have learned from sufficient art programs in their schools, comparing years from the past decade and each of the 5 boroughs, which would determine the area that best teaches their students artistically as well as displaying the rise/fall of the art programs of each school through the number of students who've studied the four disciplines of art.</p>
 <p> </p>
+<p> My hypothesis for this project is that most NYC schools will provide good art programs for its students. However, there won't be any variety or multiple art programs that hit each of the four disciplines of art. I hypothesize this because many of the schools I attended as a child may have had only one Theater class or one Music class, but never having at least 3 different art classes that would make art more fun for me and my fellow peers. </p>
+<p> </p>
 <p> The sources I will be using for this project are Art Reports from the NYC open data site at <a href="https://opendata.cityofnewyork.us/">https://opendata.cityofnewyork.us/</a>, and the data used will be from the school years 2014-15, 2015-16, 2016-17, 2017-18, and 2019-20. Their links will be provided at the end of this web page. I will be comparing and contrasting 4 sections from each of these Art Reports, including the <u>% of Graduates that Met Instructional Requirements in Arts</u>, the <u>% of 8th Grade Students that Received 2 Half-units of Instruction in Arts</u>, the <u>% of 8th Grade Students that Received 2 Half-units of Instruction in Arts in Two Different Disciplines</u>, and the <u>% of Schools Serving Grades 1-5 that Provided Arts Instruction in All Four Disciplines (Music, Dance, Theater, Visual Arts)</u>.</p>
+<p> </p>
+<h2> Coding Techniques </h2>
 <p> </p>
 <p> I wrote the code through Python, using the Pandas library to select and aggregate. Because all of the datasets were needed in order to create each graph, instead of having multiple python files that would each output a different graph or table, I used the same file and changed the print statements to output each graph needed for the project to save time. The main driver function I used for aggregation is my distToBoro function shown here: </p>
 <p> </p>
@@ -14,10 +18,10 @@
 <p> </p>
 <p> This function takes a dataframe as an argument and essentially changes the district number in each column to the respected borough they are apart of using the for loop. It then collects the means of each borough for each sections that is being used in the project. Finally it creates a dataframe that shows each borough and uses the collected means as data. </p>
 <p> </p>
-<p> After doing this for all 5 datasets, I then used concatenation to combine columns of each that looked at the same section and combined them into one dataframe that look at all of the years for that specific section (4 dataframes in total for the 4 sections we are examining). I also added the means to the bottom of each dataframe for comparison to NYC overall. This is shown here: </p>
+<p> After doing this for all 5 datasets, I then changed the column names to differentiate between each of them before I start combining them. I then used concatenation to combine columns of each that looked at the same section and combined them into one dataframe that look at all of the years for that specific section (4 dataframes in total for the 4 sections we are examining). I also added the means to the bottom of each dataframe for comparison to NYC overall, along with renaming the columns to their respected school years. This is shown here: </p>
 <img src="img/1restOfCode.png" >
 <p>  </p>
-<p> The last part of my code is the plotting part where I used the Mathlib library to plot each of the newly created dataframes: </p>
+<p> The last part of my code is the plotting part where I used the Mathplotlib library to plot each of the newly created dataframes: </p>
 <p>  </p>
 <img src="img/1graphs.png" >
 <p>  </p>
@@ -65,3 +69,22 @@
 <p>  </p>
 <p> Now, at a first glance, I believe that the biggest visual aspect of both graphs is the extremely large gap between Queens and the other four boroughs, with Queens consistently having at least 20% more than the highest of the other four boroughs for every year. This illustrates that schools in Queens are much more competent in providing much variety in the arts for its elementary students, as shown by how much larger the percentage is compared to the rest of the boroughs. </p>
 <p>  </p>
+<p> The other thing to note with the data is that the numbers are very small, having the smallest percentages out of all of the data we’ve looked at. And looking at the direction in which the lines and bars are travelling, the numbers are only getting smaller. Just like the previous dataset, this data raises the issue of lack of variety, that NYC elementary schools have no variety in their curriculum and only provide students with only one discipline of art class, which doesn't give much exposure to the art world. </p>
+<p>  </p>
+<p>  </p>
+<h2> Concluding Statements </h2>
+<p>  </p>
+<p> To conclude this entire project, I feel that the results followed my hypothesis in that although the majority of NYC school students do complete the requirements in art that they need in order to graduate, most of them do not experience learning about all of 4 disciplines of art, due to the lack of variety these schools have. This is shown by the high percentages of students who meet their requirements but low percentages of students who learn multiple disciplines and schools that provide multiple disciplines. </p>
+<p>  </p>
+<p> The reason why this project was conducted is because as a music major and someone who did music all throughout their school life, I understand the importance of exposing young minds to the wonders of art and a school of any grade level is unfit to teach kids if they do not have the necessary resources to teach them artistically just as they would academically. Therefore, I believe that NYC K-12 schools need to do better in getting those resources and teaching students all forms of art.</p>
+<p>  </p>
+<img src="img/The-Importance-of-Art-in-Child-Development.png" >
+<p>  </p>
+<p>  </p>
+<h2> Sources </h2>
+<p>  </p>
+<p> <a href="https://data.cityofnewyork.us/Education/2014-2015-Arts-Reports/exe6-f2vx">2014-2015 Art Report/</a> </p>
+<p> <a href="https://data.cityofnewyork.us/Education/2015-2016-Arts-Report/69n5-r375">2015-2016 Art Report/</a> </p>
+<p> <a href="https://data.cityofnewyork.us/Education/2016-2017-Arts-Report/tybm-5xnx">2016-2017 Art Report/</a> </p>
+<p> <a href="https://data.cityofnewyork.us/Education/2017-2018-Arts-Data-Report/d9fr-a56v">2017-2018 Art Report/</a> </p>
+<p> <a href="https://data.cityofnewyork.us/Education/2019-2020-Arts-Report/datr-f3ru">2019-2020 Art Report/</a> </p>
